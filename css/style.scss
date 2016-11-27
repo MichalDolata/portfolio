@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import "constants";
+@import "top";
+@import "work";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #5d5d5d;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $grey;
+}
+
+#page-container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#logo {
+  background-image: url("../images/logo.png");
+  height: 35px;
+  width: 58px;
+  position: fixed;
+  top: 10px;
+  opacity: 0.05;
+  z-index: 1000;
+  transition: 1s opacity;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+#navigation {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 1000;
+}
+
+#menu {
+  list-style-type: none;
+  li {
+    background-color: $navy-blue;
+    display: inline-block;
+    padding: 13px 12px;
+    a {
+      color: white;
+    }
+    &:first-child {
+      border-left: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom-left-radius: 5px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
+hr {
+  height: 3px;
+  background-color: $navy-blue;
+  margin: 40px 0 20px 0;
+}
+
+.section_title {
+  margin-left: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: $navy-blue;
+}

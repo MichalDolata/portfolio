@@ -1,0 +1,50 @@
+@import "constants";
+
+#top {
+  display: flex;
+  padding: 50px 100px 0;
+}
+
+#top-text {
+  h2 {
+    color: $navy-blue;
+    font-size: 72px;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: 24px;
+    margin-left: 20px;
+  }
+}
+
+#top-arrow {
+  position: absolute;
+  top: 164px;
+  left: 395px;
+  background-image: url("../images/arrow.png");
+  width: 227px;
+  height: 46px;
+}
+
+#top-logos {
+  margin-top: 20px;
+  display: flex;
+  img {
+    filter: gray;
+    filter: grayscale(1);
+    transition: 1s filter;
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.logos-column {
+  margin-left: 40px;
+  display: flex;
+  height: 100%;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,0 +1,80 @@
+@import "constants";
+
+#work {
+
+}
+
+#work-container {
+  display: flex;
+  margin: 0 20px;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.cause {
+  position: relative;
+  margin-top: 20px;
+  &:nth-child(odd) {
+    .cause-details {
+      right: 0;
+    }
+    &:hover {
+      > .cause-demo {
+        visibility: visible;
+        opacity: 1;
+      }
+      > .cause-details {
+        right: -460px;
+        width: 460px;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    .cause-details {
+      left: 0;
+    }
+    &:hover {
+      > .cause-demo {
+        visibility: visible;
+        opacity: 1;
+      }
+      > .cause-details {
+        width: 460px;
+        left: -460px;
+      }
+    }
+  }
+}
+
+.cause-demo {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 204px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 1s;
+  a {
+    color: white;
+    font-weight: 400;
+    font-size: 36px;
+    display: block;
+    height: 100%;
+    text-align: center;
+    padding-top: 75px;
+  }
+}
+
+.cause-details {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #d1d1d1;
+  overflow: hidden;
+  transition: right 1s, width 1s, left 1s;
+  z-index: 998;
+}
