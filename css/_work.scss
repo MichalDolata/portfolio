@@ -1,9 +1,5 @@
 @import "constants";
 
-#work {
-
-}
-
 #work-container {
   display: flex;
   margin: 0 20px;
@@ -14,43 +10,15 @@
 .cause {
   position: relative;
   margin-top: 20px;
-  &:nth-child(odd) {
-    .cause-details {
-      right: 0;
+  height: 204px;
+  font-size: 0;
+  &:hover {
+    .cause-demo {
+      visibility: visible;
+      opacity: 1;
     }
-    &:hover {
-      > .cause-demo {
-        visibility: visible;
-        opacity: 1;
-      }
-      > .cause-details {
-        right: -460px;
-        width: 460px;
-        h3, p {
-          opacity: 1;
-          transition: all 1s ease 0.5s;
-        }
-      }
-    }
-  }
-
-  &:nth-child(even) {
-    .cause-details {
-      left: 0;
-    }
-    &:hover {
-      > .cause-demo {
-        visibility: visible;
-        opacity: 1;
-      }
-      > .cause-details {
-        width: 460px;
-        left: -460px;
-        h3, p {
-          opacity: 1;
-          transition: all 1s ease 0.5s;
-        }
-      }
+    .cause-more {
+      transform: scaleX(1);
     }
   }
 }
@@ -76,26 +44,22 @@
   }
 }
 
-.cause-details {
+.cause-more {
+  font-size: 12px;
+  right: -110px;
+  width: 110px;
   position: absolute;
-  top: 0;
-  height: 204px;
-  width: 0;
-  background-color: #d1d1d1;
-  transition: all 2s;
   overflow: hidden;
+  height: 53px;
+  background-color: #d1d1d1;
+  transition: 0.5s all;
+  transform-origin: 0% 0%;
+  transform: scaleX(0);
   z-index: 998;
-  h3 {
-    color: $navy-blue;
-    font-weight: bolder;
-    margin: 10px 20px 5px 20px;
-    font-size: 1.3em;
-  }
-  p {
-    margin: 0px 20px 5px 20px;
-  }
-  h3, p {
-    opacity: 0;
-    transition: all 0.5s ease 0s;
+  a {
+    margin-left: 10px;
+    img {
+      margin: -5px 0 0 5px;
+    }
   }
 }
