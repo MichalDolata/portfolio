@@ -3,6 +3,12 @@
 #top {
   display: flex;
   padding: 50px 100px 0;
+  @media screen and (max-width: 930px) {
+    flex-flow: column wrap;
+  }
+  @media screen and (max-width: 720px) {
+    padding: 50px 50px 0;
+  }
 }
 
 #top-text {
@@ -10,12 +16,19 @@
     color: $navy-blue;
     font-size: 72px;
     font-weight: bolder;
+    @media screen and (max-width: 650px) {
+      font-size: 48px;
+    }
   }
 
   p {
     font-size: 24px;
+    @media screen and (max-width: 650px) {
+      font-size: 20px;
+    }
     margin-left: 20px;
   }
+
 }
 
 #top-arrow {
@@ -25,11 +38,19 @@
   background-image: url("../images/arrow.png");
   width: 227px;
   height: 46px;
+  @media screen and (max-width: 930px) {
+    display: none;
+  }
 }
 
 #top-logos {
-  margin-top: 20px;
+  margin-top: 5px;
   display: flex;
+  flex-flow: column wrap;
+  height: 230px;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
   img {
     filter: gray;
     filter: grayscale(1);
@@ -38,13 +59,16 @@
       filter: none;
     }
   }
+  @media screen and (max-width: 930px) {
+    margin-top: 20px;
+    width: 100%;
+    height: inherit;
+    flex-flow: row wrap;
+  }
 }
 
-.logos-column {
-  margin-left: 40px;
-  display: flex;
-  height: 100%;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
+@media screen and (min-width: 931px) {
+  .mobile-text {
+    display: none;
+  }
 }
