@@ -14,7 +14,7 @@
 #top-arrow {
   position: absolute;
   top: 164px;
-  left: 395px;
+  left: 400px;
   background-image: url("../images/arrow.png");
   width: 227px;
   height: 46px; }
@@ -54,6 +54,9 @@
   .cause:nth-child(odd):hover > .cause-details {
     right: -460px;
     width: 460px; }
+    .cause:nth-child(odd):hover > .cause-details h3, .cause:nth-child(odd):hover > .cause-details p {
+      opacity: 1;
+      transition: all 1s ease 0.5s; }
   .cause:nth-child(even) .cause-details {
     left: 0; }
   .cause:nth-child(even):hover > .cause-demo {
@@ -62,6 +65,9 @@
   .cause:nth-child(even):hover > .cause-details {
     width: 460px;
     left: -460px; }
+    .cause:nth-child(even):hover > .cause-details h3, .cause:nth-child(even):hover > .cause-details p {
+      opacity: 1;
+      transition: all 1s ease 0.5s; }
 
 .cause-demo {
   visibility: hidden;
@@ -85,12 +91,38 @@
 .cause-details {
   position: absolute;
   top: 0;
-  height: 100%;
+  height: 204px;
   width: 0;
   background-color: #d1d1d1;
+  transition: all 2s;
   overflow: hidden;
-  transition: right 1s, width 1s, left 1s;
   z-index: 998; }
+  .cause-details h3 {
+    color: #312e59;
+    font-weight: bolder;
+    margin: 10px 20px 5px 20px;
+    font-size: 1.3em; }
+  .cause-details p {
+    margin: 0px 20px 5px 20px; }
+  .cause-details h3, .cause-details p {
+    opacity: 0;
+    transition: all 0.5s ease 0s; }
+
+#contact {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px; }
+  #contact p {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px; }
+  #contact i {
+    font-size: 2.2em;
+    margin: 0 8px;
+    transition: all 0.8s; }
+    #contact i:hover {
+      color: #323335;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
 
 * {
   margin: 0;
@@ -152,5 +184,10 @@ hr {
   font-size: 32px;
   font-weight: bold;
   color: #312e59; }
+
+#footer {
+  width: 100%;
+  height: 8px;
+  background-color: #312e59; }
 
 /*# sourceMappingURL=style.css.map */
