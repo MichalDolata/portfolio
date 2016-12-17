@@ -46,6 +46,10 @@
 
 .cause-more {
   font-size: 12px;
+  @media screen and (max-width: 555px){
+    transform-origin: 100% 0;
+    right: 0;
+  }
   right: -110px;
   width: 110px;
   position: absolute;
@@ -53,7 +57,7 @@
   height: 53px;
   background-color: #d1d1d1;
   transition: 0.5s all;
-  transform-origin: 0% 0%;
+  transform-origin: 0 0;
   transform: scaleX(0);
   z-index: 998;
   a {

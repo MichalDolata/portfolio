@@ -22,6 +22,11 @@
   @media screen and (max-width: 650px) {
     #top-text p {
       font-size: 20px; } }
+  #top-text p a {
+    color: #312e59;
+    position: relative;
+    z-index: 300;
+    font-weight: 600; }
 
 #top-arrow {
   position: absolute;
@@ -103,9 +108,13 @@
   height: 53px;
   background-color: #d1d1d1;
   transition: 0.5s all;
-  transform-origin: 0% 0%;
+  transform-origin: 0 0;
   transform: scaleX(0);
   z-index: 998; }
+  @media screen and (max-width: 555px) {
+    .cause-more {
+      transform-origin: 100% 0;
+      right: 0; } }
   .cause-more a {
     margin-left: 10px; }
     .cause-more a img {

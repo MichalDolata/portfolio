@@ -27,6 +27,12 @@
       font-size: 20px;
     }
     margin-left: 20px;
+    a {
+      color: $navy-blue;
+      position: relative;
+      z-index: 300;
+      font-weight: 600;
+    }
   }
 
 }
